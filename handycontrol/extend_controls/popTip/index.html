@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="The Popup control provides a way to display content in a separate window that floats over the current application window relative to a designated element or screen coordinate. This topic introduces th">
+  <meta name="description" content="It is often used to display the prompt information when the mouse is hovered. 1public class Poptip : AdornerElement Attributes   Property Description Default Value Remarks     HitMode Trigger Mode Hit">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PopTip">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/popTip/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="The Popup control provides a way to display content in a separate window that floats over the current application window relative to a designated element or screen coordinate. This topic introduces th">
+<meta property="og:description" content="It is often used to display the prompt information when the mouse is hovered. 1public class Poptip : AdornerElement Attributes   Property Description Default Value Remarks     HitMode Trigger Mode Hit">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Poptip.gif">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.795Z">
+<meta property="og:updated_time" content="2020-08-14T05:44:15.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PopTip">
-<meta name="twitter:description" content="The Popup control provides a way to display content in a separate window that floats over the current application window relative to a designated element or screen coordinate. This topic introduces th">
+<meta name="twitter:description" content="It is often used to display the prompt information when the mouse is hovered. 1public class Poptip : AdornerElement Attributes   Property Description Default Value Remarks     HitMode Trigger Mode Hit">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Poptip.gif">
 
 
@@ -1134,8 +1134,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3760,65 +3758,70 @@
       <div class="post-body">
         
         
-          <p>The Popup control provides a way to display content in a separate window that floats over the current application window relative to a designated element or screen coordinate. This topic introduces the Popup control and provides information about its use.</p>
-<p>example:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">Margin</span>=<span class="string">"8,0"</span> <span class="attr">Tag</span>=<span class="string">"0"</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource Button4PoptipStyle&#125;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">hc:Poptip.Instance</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">hc:Poptip</span> <span class="attr">Content</span>=<span class="string">"Text"</span> <span class="attr">PlacementType</span>=<span class="string">"TopLeft"</span>/&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">hc:Poptip.Instance</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>or<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">Margin</span>=<span class="string">"8,0"</span> <span class="attr">Tag</span>=<span class="string">"1"</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource Button4PoptipStyle&#125;"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">hc:Poptip.Instance</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">hc:Poptip</span> <span class="attr">PlacementType</span>=<span class="string">"Top"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:Poptip.Content</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">Path</span> <span class="attr">Width</span>=<span class="string">"100"</span> <span class="attr">Height</span>=<span class="string">"100"</span> <span class="attr">Fill</span>=<span class="string">"#f06632"</span> <span class="attr">Data</span>=<span class="string">"&#123;StaticResource LogoGeometry&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">hc:Poptip.Content</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">hc:Poptip</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">hc:Poptip.Instance</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>or<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">hc:Poptip.Content</span>=<span class="string">"Text"</span> <span class="attr">hc:Poptip.PlacementType</span>=<span class="string">"TopRight"</span> <span class="attr">Margin</span>=<span class="string">"8,0"</span> <span class="attr">Tag</span>=<span class="string">"2"</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource Button4PoptipStyle&#125;"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>or<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ToggleButton</span> <span class="attr">hc:Poptip.HitMode</span>=<span class="string">"None"</span> <span class="attr">hc:Poptip.IsOpen</span>=<span class="string">"True"</span> <span class="attr">hc:Poptip.Content</span>=<span class="string">"Text"</span> <span class="attr">hc:Poptip.PlacementType</span>=<span class="string">"RightTop"</span> <span class="attr">Margin</span>=<span class="string">"8,16"</span> <span class="attr">Tag</span>=<span class="string">"3"</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ToggleButton4PoptipStyle&#125;"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+          <p>It is often used to display the prompt information when the mouse is hovered.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Poptip</span> : <span class="title">AdornerElement</span></span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>HitMode</td>
-<td>Includes Click, Hover, Focus, None</td>
+<td>Trigger Mode</td>
+<td>HitMode.Hover</td>
+<td></td>
 </tr>
 <tr>
 <td>Content</td>
+<td>Reminder content</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>ContentTemplate</td>
+<td>Prompt content template</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>ContentStringFormat</td>
+<td>Prompt content text format</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>ContentTemplateSelector</td>
+<td>Prompt Content Template Selector</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>Offset</td>
+<td>Offset</td>
+<td>6</td>
 <td></td>
 </tr>
 <tr>
 <td>PlacementType</td>
-<td>Includes LeftTop, Left, LeftBottom, TopLeft, Top, TopRight, RightTop, Right, RightBottom, BottomLeft, Bottom, BottomRight</td>
-</tr>
-<tr>
-<td>IsOpen</td>
+<td>PlacementType.Top</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>Target</td>
-<td>Accessible through AdornerElement</td>
-</tr>
-<tr>
-<td>Instance</td>
-<td>Accessible through AdornerElement</td>
-</tr>
-<tr>
-<td>IsInstance</td>
-<td>Accessible through AdornerElement</td>
+<td>IsOpen</td>
+<td>Whether to open</td>
+<td>false</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:Poptip.Instance</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:Poptip</span> <span class="attr">Content</span>=<span class="string">"Text"</span> <span class="attr">PlacementType</span>=<span class="string">"TopLeft"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">hc:Poptip.Instance</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ToggleButton</span> <span class="attr">hc:Poptip.HitMode</span>=<span class="string">"None"</span> <span class="attr">hc:Poptip.IsOpen</span>=<span class="string">"&#123;Binding IsChecked,RelativeSource=&#123;RelativeSource Self&#125;&#125;"</span> <span class="attr">hc:Poptip.Content</span>=<span class="string">"Text"</span> <span class="attr">hc:Poptip.Placement</span>=<span class="string">"RightTop"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Poptip.gif" alt="PopTip"></p>
 
         
@@ -3994,7 +3997,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4005,7 +4008,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4057,7 +4060,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">2.</span> <span class="nav-text">Case</span></a></li></ol></div>
             
 
           </div>

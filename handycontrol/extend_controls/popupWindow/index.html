@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="example:123456789101112PopupWindow popup = new PopupWindow()                &amp;#123;                    MinWidth = 400,                    Title = &quot;Title&quot;,                    WindowStartupLocation = Win">
+  <meta name="description" content="PopupWindow can control the position of pop-up elements more flexibly than PopTip.              PopupWindow may become obsolete in future versions.            123[TemplatePart(Name = ElementMainBorder">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PopupWindow">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/popupWindow/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="example:123456789101112PopupWindow popup = new PopupWindow()                &amp;#123;                    MinWidth = 400,                    Title = &quot;Title&quot;,                    WindowStartupLocation = Win">
+<meta property="og:description" content="PopupWindow can control the position of pop-up elements more flexibly than PopTip.              PopupWindow may become obsolete in future versions.            123[TemplatePart(Name = ElementMainBorder">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.796Z">
+<meta property="og:updated_time" content="2020-08-17T17:03:47.003Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PopupWindow">
-<meta name="twitter:description" content="example:123456789101112PopupWindow popup = new PopupWindow()                &amp;#123;                    MinWidth = 400,                    Title = &quot;Title&quot;,                    WindowStartupLocation = Win">
+<meta name="twitter:description" content="PopupWindow can control the position of pop-up elements more flexibly than PopTip.              PopupWindow may become obsolete in future versions.            123[TemplatePart(Name = ElementMainBorder">
 
 
 
@@ -1132,8 +1132,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3758,21 +3756,78 @@
       <div class="post-body">
         
         
-          <p>example:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PopupWindow popup = <span class="keyword">new</span> PopupWindow()</span><br><span class="line">                &#123;</span><br><span class="line">                    MinWidth = <span class="number">400</span>,</span><br><span class="line">                    Title = <span class="string">"Title"</span>,</span><br><span class="line">                    WindowStartupLocation = WindowStartupLocation.CenterScreen,</span><br><span class="line">                    ShowInTaskbar = <span class="literal">true</span>,</span><br><span class="line">                    AllowsTransparency = <span class="literal">true</span>,</span><br><span class="line">                    WindowStyle = WindowStyle.None</span><br><span class="line">                &#125;;</span><br><span class="line">                TextBox txtUsername = <span class="keyword">new</span> TextBox();</span><br><span class="line">popup.PopupElement = mainStack;</span><br><span class="line">popup.ShowDialog();</span><br></pre></td></tr></table></figure></p>
+          <p><code>PopupWindow</code> can control the position of pop-up elements more flexibly than <code>PopTip</code>.</p>
+<div class="note warning">
+            <p>PopupWindow may become obsolete in future versions.</p>
+          </div>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">TemplatePart(Name = ElementMainBorder, Type = typeof(Border))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementTitleBlock, Type = typeof(TextBlock))</span>]</span><br><span class="line">public class PopupWindow : System.Windows.Window</span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>PopupElement</td>
-<td>Popup Children</td>
+<td>Popup Element</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ShowTitle</td>
+<td>Whether to show the title</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>ShowCancel</td>
+<td>Whether to show the cancel button</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>ShowBorder</td>
+<td>Whether to show the border</td>
+<td>false</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show(FrameworkElement, bool)</td>
+<td>Display window (pop-up element, with background or not)</td>
+</tr>
+<tr>
+<td>Show(System.Windows.Window, Point)</td>
+<td>Display window (relative window, offset coordinates)</td>
+</tr>
+<tr>
+<td>Show(string)</td>
+<td>Show window (pop-up message)</td>
+</tr>
+<tr>
+<td>ShowDialog(FrameworkElement, bool)</td>
+<td>Modal display window (pop-up element, whether with background)</td>
+</tr>
+<tr>
+<td>ShowDialog(string, string title, bool)</td>
+<td>Modal display window (pop-up information, title, whether to display the cancel button)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PopupWindow popup = <span class="keyword">new</span> PopupWindow()</span><br><span class="line">                &#123;</span><br><span class="line">                    MinWidth = <span class="number">400</span>,</span><br><span class="line">                    Title = <span class="string">"Title"</span>,</span><br><span class="line">                    WindowStartupLocation = WindowStartupLocation.CenterScreen,</span><br><span class="line">                    ShowInTaskbar = <span class="literal">true</span>,</span><br><span class="line">                    AllowsTransparency = <span class="literal">true</span>,</span><br><span class="line">                    WindowStyle = WindowStyle.None</span><br><span class="line">                &#125;;</span><br><span class="line">                TextBox txtUsername = <span class="keyword">new</span> TextBox();</span><br><span class="line">popup.PopupElement = mainStack;</span><br><span class="line">popup.ShowDialog();</span><br></pre></td></tr></table></figure>
 
         
       </div>
@@ -3947,7 +4002,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -3958,7 +4013,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4010,7 +4065,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Method"><span class="nav-number">2.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">3.</span> <span class="nav-text">Case</span></a></li></ol></div>
             
 
           </div>

@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="HandyOrg">
 <meta property="og:description" content="for using extension methods you need to add Using HandyControl.Tools.Extension; AddOnUiThis Extension Method Help you to Add Items into ObservableCollection from Another Thread1DataList.AddOnUI(new Pa">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-13T08:57:36.710Z">
+<meta property="og:updated_time" content="2020-08-14T06:53:29.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Extensions">
 <meta name="twitter:description" content="for using extension methods you need to add Using HandyControl.Tools.Extension; AddOnUiThis Extension Method Help you to Add Items into ObservableCollection from Another Thread1DataList.AddOnUI(new Pa">
@@ -1164,8 +1164,6 @@
               
                 
               
-                
-              
             
           
           </ul>
@@ -1764,35 +1762,6 @@
 
                         
                       
-                        
-                        
-                        
-                          
-                            
-                          
-                          
-
-  
-  
-    
-  
-  <li class="menu-item menu-item-maincontentbackground">
-
-    
-    
-    
-
-    
-      
-    
-
-    <a href="/handycontrol/persianToolkit/mainContentBackground/" rel="section">MainContentBackground</a>
-
-  </li>
-
-
-                        
-                      
                       </ul>
                       
 
@@ -1938,6 +1907,11 @@
 <p>Converts any type in to an Int32 but if null then returns the default<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> badNumber = <span class="string">"a"</span>.ToInt32(<span class="number">100</span>); <span class="comment">// Returns 100 since a is nan</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="GetEnumeratorWithIndex"><a href="#GetEnumeratorWithIndex" class="headerlink" title="GetEnumeratorWithIndex"></a>GetEnumeratorWithIndex</h1><p>This Extension Help you to access item index in foreach loop<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">"ABCDEFG"</span>;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> s.GetEnumeratorWithIndex())</span><br><span class="line">&#123;</span><br><span class="line">    System.Console.WriteLine(<span class="string">"Character: &#123;0&#125;, Position: &#123;1&#125;"</span>, item.Value, item.Index);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h1><p>Enable quick and more natural string.Format calls<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">"The co-ordinate is (&#123;0&#125;, &#123;1&#125;)"</span>.Format(point.X, point.Y);</span><br></pre></td></tr></table></figure></p>
+<h1 id="Cryptography"><a href="#Cryptography" class="headerlink" title="Cryptography"></a>Cryptography</h1><p>Generate (SHA256 or MD5) Hash</p>
+<pre><code class="CS"><span class="keyword">var</span> hashMD5 = <span class="string">"Test string"</span>.GenerateMD5();
+
+<span class="keyword">var</span> hashSHA256 = <span class="string">"Test string"</span>.GenerateSHA256();
+</code></pre>
 
         
       </div>
@@ -2112,7 +2086,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -2123,7 +2097,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -2175,7 +2149,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AddOnUi"><span class="nav-number">1.</span> <span class="nav-text">AddOnUi</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Between"><span class="nav-number">2.</span> <span class="nav-text">Between</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ToInt32"><span class="nav-number">3.</span> <span class="nav-text">ToInt32</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GetEnumeratorWithIndex"><span class="nav-number">4.</span> <span class="nav-text">GetEnumeratorWithIndex</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Format"><span class="nav-number">5.</span> <span class="nav-text">Format</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AddOnUi"><span class="nav-number">1.</span> <span class="nav-text">AddOnUi</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Between"><span class="nav-number">2.</span> <span class="nav-text">Between</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ToInt32"><span class="nav-number">3.</span> <span class="nav-text">ToInt32</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GetEnumeratorWithIndex"><span class="nav-number">4.</span> <span class="nav-text">GetEnumeratorWithIndex</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Format"><span class="nav-number">5.</span> <span class="nav-text">Format</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cryptography"><span class="nav-number">6.</span> <span class="nav-text">Cryptography</span></a></li></ol></div>
             
 
           </div>

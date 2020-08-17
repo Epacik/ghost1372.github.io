@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="With OutlineText control, you can create styled text. example:1&amp;lt;hc:OutlineText Text=&quot;Content&quot;/&amp;gt;              To use brushes, you should set Stroke and Fill            Attributes   Property Descr">
+  <meta name="description" content="OutlineText can make the text highlighted. 1public class OutlineText: FrameworkElement Attributes   Property Description Default Value Remarks     StrokePosition Outline Position StrokePosition.Center">
 <meta property="og:type" content="website">
 <meta property="og:title" content="OutlineText">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/outlineText/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="With OutlineText control, you can create styled text. example:1&amp;lt;hc:OutlineText Text=&quot;Content&quot;/&amp;gt;              To use brushes, you should set Stroke and Fill            Attributes   Property Descr">
+<meta property="og:description" content="OutlineText can make the text highlighted. 1public class OutlineText: FrameworkElement Attributes   Property Description Default Value Remarks     StrokePosition Outline Position StrokePosition.Center">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/OutlineText.png">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.793Z">
+<meta property="og:updated_time" content="2020-08-14T05:43:35.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OutlineText">
-<meta name="twitter:description" content="With OutlineText control, you can create styled text. example:1&amp;lt;hc:OutlineText Text=&quot;Content&quot;/&amp;gt;              To use brushes, you should set Stroke and Fill            Attributes   Property Descr">
+<meta name="twitter:description" content="OutlineText can make the text highlighted. 1public class OutlineText: FrameworkElement Attributes   Property Description Default Value Remarks     StrokePosition Outline Position StrokePosition.Center">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/OutlineText.png">
 
 
@@ -1134,8 +1134,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3760,41 +3758,99 @@
       <div class="post-body">
         
         
-          <p>With OutlineText control, you can create styled text.</p>
-<p>example:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">Text</span>=<span class="string">"Content"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<div class="note warning">
-            <p>To use brushes, you should set <strong>Stroke</strong> and <strong>Fill</strong></p>
-          </div>
+          <p><code>OutlineText</code> can make the text highlighted.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">OutlineText</span>: <span class="title">FrameworkElement</span></span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>StrokePosition</td>
+<td>Outline Position</td>
+<td>StrokePosition.Center</td>
+<td></td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TextAlignment</td>
+<td>Text Alignment</td>
+<td>TextAlignment.Left</td>
+<td></td>
+</tr>
+<tr>
+<td>TextTrimming</td>
+<td>Text truncation method</td>
+<td>TextTrimming.None</td>
+<td></td>
+</tr>
+<tr>
+<td>TextWrapping</td>
+<td>Text Wrapping</td>
+<td>TextWrapping.NoWrap</td>
+<td></td>
+</tr>
+<tr>
 <td>Fill</td>
-<td>The color that fills in the text</td>
+<td>Text color</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Stroke</td>
-<td>The color that fills the border of the text</td>
+<td>Outline Color</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>StrokeThickness</td>
-<td>Thickness for text border</td>
+<td>Outline thickness</td>
+<td>0</td>
+<td></td>
 </tr>
 <tr>
-<td>Text</td>
-<td>Text</td>
+<td>FontFamily</td>
+<td>Font</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>StrokePosition</td>
-<td>Include <strong>Center, Outside, Inside</strong></td>
+<td>FontSize</td>
+<td>Font Size</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FontStretch</td>
+<td>Font deformation method</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FontStyle</td>
+<td>Font Style</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FontWeight</td>
+<td>Font Weight</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">"32"</span> <span class="attr">Width</span>=<span class="string">"400"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">TextWrapping</span>=<span class="string">"Wrap"</span> <span class="attr">Fill</span>=<span class="string">"&#123;DynamicResource PrimaryTextBrush&#125;"</span> <span class="attr">Text</span>=<span class="string">"&#123;ex:Lang Key=&#123;x:Static langs:LangKeys.Text&#125;, Converter=&#123;StaticResource StringRepeatConverter&#125;, ConverterParameter=20&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">Margin</span>=<span class="string">"0,10,0,0"</span> <span class="attr">FontSize</span>=<span class="string">"30"</span> <span class="attr">Fill</span>=<span class="string">"&#123;DynamicResource SuccessBrush&#125;"</span> <span class="attr">Text</span>=<span class="string">"&#123;ex:Lang Key=&#123;x:Static langs:LangKeys.Text&#125;, Converter=&#123;StaticResource StringRepeatConverter&#125;, ConverterParameter=8&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">Margin</span>=<span class="string">"0,10,0,0"</span> <span class="attr">Fill</span>=<span class="string">"&#123;DynamicResource PrimaryTextBrush&#125;"</span> <span class="attr">FontSize</span>=<span class="string">"30"</span> <span class="attr">FontStyle</span>=<span class="string">"Italic"</span> <span class="attr">Text</span>=<span class="string">"&#123;ex:Lang Key=&#123;x:Static langs:LangKeys.Text&#125;, Converter=&#123;StaticResource StringRepeatConverter&#125;, ConverterParameter=8&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">Margin</span>=<span class="string">"0,10,0,0"</span> <span class="attr">TextWrapping</span>=<span class="string">"Wrap"</span> <span class="attr">TextTrimming</span>=<span class="string">"CharacterEllipsis"</span> <span class="attr">FontSize</span>=<span class="string">"50"</span> <span class="attr">StrokeThickness</span>=<span class="string">"2"</span> <span class="attr">Fill</span>=<span class="string">"&#123;DynamicResource DangerBrush&#125;"</span> <span class="attr">Stroke</span>=<span class="string">"&#123;DynamicResource PrimaryBrush&#125;"</span> <span class="attr">Text</span>=<span class="string">"&#123;ex:Lang Key=&#123;x:Static langs:LangKeys.Text&#125;, Converter=&#123;StaticResource StringRepeatConverter&#125;, ConverterParameter=5&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">Margin</span>=<span class="string">"0,10,0,0"</span> <span class="attr">FontSize</span>=<span class="string">"80"</span> <span class="attr">FontWeight</span>=<span class="string">"Bold"</span> <span class="attr">StrokeThickness</span>=<span class="string">"4"</span> <span class="attr">Fill</span>=<span class="string">"&#123;DynamicResource PrimaryBrush&#125;"</span> <span class="attr">Stroke</span>=<span class="string">"&#123;DynamicResource DangerBrush&#125;"</span> <span class="attr">Text</span>=<span class="string">"&#123;ex:Lang Key=&#123;x:Static langs:LangKeys.Text&#125;, Converter=&#123;StaticResource StringRepeatConverter&#125;, ConverterParameter=2&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">Margin</span>=<span class="string">"0,10,0,0"</span> <span class="attr">StrokePosition</span>=<span class="string">"Outside"</span> <span class="attr">FontSize</span>=<span class="string">"80"</span> <span class="attr">FontWeight</span>=<span class="string">"Bold"</span> <span class="attr">StrokeThickness</span>=<span class="string">"4"</span> <span class="attr">Fill</span>=<span class="string">"&#123;DynamicResource PrimaryBrush&#125;"</span> <span class="attr">Stroke</span>=<span class="string">"&#123;DynamicResource DangerBrush&#125;"</span> <span class="attr">Text</span>=<span class="string">"&#123;ex:Lang Key=&#123;x:Static langs:LangKeys.Text&#125;, Converter=&#123;StaticResource StringRepeatConverter&#125;, ConverterParameter=2&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:OutlineText</span> <span class="attr">Margin</span>=<span class="string">"0,10,0,0"</span> <span class="attr">StrokePosition</span>=<span class="string">"InSide"</span> <span class="attr">FontSize</span>=<span class="string">"80"</span> <span class="attr">FontWeight</span>=<span class="string">"Bold"</span> <span class="attr">StrokeThickness</span>=<span class="string">"4"</span> <span class="attr">Fill</span>=<span class="string">"&#123;DynamicResource PrimaryBrush&#125;"</span> <span class="attr">Stroke</span>=<span class="string">"&#123;DynamicResource DangerBrush&#125;"</span> <span class="attr">Text</span>=<span class="string">"&#123;ex:Lang Key=&#123;x:Static langs:LangKeys.Text&#125;, Converter=&#123;StaticResource StringRepeatConverter&#125;, ConverterParameter=2&#125;"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/OutlineText.png" alt="OutlineText"></p>
 
         
@@ -3970,7 +4026,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -3981,7 +4037,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4033,7 +4089,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">2.</span> <span class="nav-text">Case</span></a></li></ol></div>
             
 
           </div>

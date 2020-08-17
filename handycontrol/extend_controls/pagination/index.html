@@ -96,17 +96,19 @@
 
 
 
-  <meta name="description" content="first we create a pagination and a datagrid also we create a PageUpdated event for pagiantion123456789101112131415&amp;lt;Grid&amp;gt;    &amp;lt;Grid.RowDefinitions&amp;gt;        &amp;lt;RowDefinition Height=&quot;Auto&quot;/&amp;gt">
+  <meta name="description" content="When there is too much data, use paging to decompose the data. 123456789[TemplatePart(Name = ElementButtonLeft, Type = typeof(Button))][TemplatePart(Name = ElementButtonRight, Type = typeof(Button))][">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pagination">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/pagination/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="first we create a pagination and a datagrid also we create a PageUpdated event for pagiantion123456789101112131415&amp;lt;Grid&amp;gt;    &amp;lt;Grid.RowDefinitions&amp;gt;        &amp;lt;RowDefinition Height=&quot;Auto&quot;/&amp;gt">
+<meta property="og:description" content="When there is too much data, use paging to decompose the data. 123456789[TemplatePart(Name = ElementButtonLeft, Type = typeof(Button))][TemplatePart(Name = ElementButtonRight, Type = typeof(Button))][">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.793Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/Pagination.png">
+<meta property="og:updated_time" content="2020-08-14T05:32:41.417Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pagination">
-<meta name="twitter:description" content="first we create a pagination and a datagrid also we create a PageUpdated event for pagiantion123456789101112131415&amp;lt;Grid&amp;gt;    &amp;lt;Grid.RowDefinitions&amp;gt;        &amp;lt;RowDefinition Height=&quot;Auto&quot;/&amp;gt">
+<meta name="twitter:description" content="When there is too much data, use paging to decompose the data. 123456789[TemplatePart(Name = ElementButtonLeft, Type = typeof(Button))][TemplatePart(Name = ElementButtonRight, Type = typeof(Button))][">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/Pagination.png">
 
 
 
@@ -1132,8 +1134,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3758,47 +3758,74 @@
       <div class="post-body">
         
         
-          <p>first we create a pagination and a datagrid also we create a <code>PageUpdated</code> event for pagiantion<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"Auto"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:Pagination</span> <span class="attr">MaxPageCount</span>=<span class="string">"10"</span> <span class="attr">PageUpdated</span>=<span class="string">"page_PageUpdated"</span> <span class="attr">PageIndex</span>=<span class="string">"1"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">DataGrid</span> <span class="attr">Grid.Row</span>=<span class="string">"1"</span> <span class="attr">AutoGenerateColumns</span>=<span class="string">"False"</span> <span class="attr">ItemsSource</span>=<span class="string">"&#123;Binding DataList&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">DataGrid.Columns</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DataGridTextColumn</span> <span class="attr">Binding</span>=<span class="string">"&#123;Binding Index&#125;"</span> <span class="attr">Header</span>=<span class="string">"Index"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DataGridTextColumn</span> <span class="attr">Binding</span>=<span class="string">"&#123;Binding Name&#125;"</span> <span class="attr">Header</span>=<span class="string">"Name"</span>/&gt;</span>           </span><br><span class="line">        <span class="tag">&lt;/<span class="name">DataGrid.Columns</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">DataGrid</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>for example we load 100 items to a list called <code>_totalDataList</code> then we take 10 items to a another list called <code>DataList</code> Which is binded on datagrid</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_totalDataList = dataService.GetDemoDataList(<span class="number">100</span>);</span><br><span class="line">DataList = _totalDataList.Take(<span class="number">10</span>).ToList();</span><br></pre></td></tr></table></figure>
-<p>now we need update our list based on page so we do this in <code>PageUpdated</code> event:</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">page_PageUpdated</span>(<span class="params"><span class="keyword">object</span> sender, HandyControl.Data.FunctionEventArgs&lt;<span class="keyword">int</span>&gt; e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    DataList = _totalDataList.Skip((e.Info - <span class="number">1</span>) * <span class="number">10</span>).Take(<span class="number">10</span>).ToList();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>When there is too much data, use paging to decompose the data.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">TemplatePart(Name = ElementButtonLeft, Type = typeof(Button))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementButtonRight, Type = typeof(Button))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementButtonFirst, Type = typeof(RadioButton))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementMoreLeft, Type = typeof(FrameworkElement))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementPanelMain, Type = typeof(Panel))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementMoreRight, Type = typeof(FrameworkElement))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementButtonLast, Type = typeof(RadioButton))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementButtonLast, Type = typeof(NumericUpDown))</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Pagination</span> : <span class="title">Control</span></span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>MaxPageCount</td>
+<td>Maximum number of pages</td>
+<td>1</td>
+<td></td>
 </tr>
 <tr>
 <td>DataCountPerPage</td>
+<td>The amount of data per page</td>
+<td>20</td>
+<td></td>
 </tr>
 <tr>
 <td>PageIndex</td>
+<td>Page Number</td>
+<td>1</td>
+<td></td>
 </tr>
 <tr>
 <td>MaxPageInterval</td>
+<td>The maximum distance between the currently selected button and the left and right direction buttons (4 means 4 buttons apart, if it exceeds, it will be indicated by an ellipsis)</td>
+<td>3</td>
+<td></td>
 </tr>
 <tr>
 <td>IsJumpEnabled</td>
+<td>Whether to display the jump box</td>
+<td>false</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h1 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h1><table>
 <thead>
 <tr>
-<th>Event</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>PageUpdated</td>
+<td>Triggered when the page number changes</td>
 </tr>
 </tbody>
 </table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:Pagination</span> <span class="attr">MaxPageCount</span>=<span class="string">"10"</span> <span class="attr">PageIndex</span>=<span class="string">"5"</span> <span class="attr">IsJumpEnabled</span>=<span class="string">"True"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/Pagination.png" alt="Pagination"></p>
+<div class="note warning">
+            <p>When the page number is 1, the whole page number bar will not be displayed.</p>
+          </div>
+<h1 id="Full-Example"><a href="#Full-Example" class="headerlink" title="Full Example"></a>Full Example</h1><p>first we create a pagination and a datagrid also we create a <code>PageUpdated</code> event for pagiantion<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"Auto"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:Pagination</span> <span class="attr">MaxPageCount</span>=<span class="string">"10"</span> <span class="attr">PageUpdated</span>=<span class="string">"page_PageUpdated"</span> <span class="attr">PageIndex</span>=<span class="string">"1"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">DataGrid</span> <span class="attr">Grid.Row</span>=<span class="string">"1"</span> <span class="attr">AutoGenerateColumns</span>=<span class="string">"False"</span> <span class="attr">ItemsSource</span>=<span class="string">"&#123;Binding DataList&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">DataGrid.Columns</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DataGridTextColumn</span> <span class="attr">Binding</span>=<span class="string">"&#123;Binding Index&#125;"</span> <span class="attr">Header</span>=<span class="string">"Index"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DataGridTextColumn</span> <span class="attr">Binding</span>=<span class="string">"&#123;Binding Name&#125;"</span> <span class="attr">Header</span>=<span class="string">"Name"</span>/&gt;</span>           </span><br><span class="line">        <span class="tag">&lt;/<span class="name">DataGrid.Columns</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">DataGrid</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>for example we load 100 items to a list called <code>_totalDataList</code> then we take 10 items to a another list called <code>DataList</code> Which is binded on datagrid</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_totalDataList = dataService.GetDemoDataList(<span class="number">100</span>);</span><br><span class="line">DataList = _totalDataList.Take(<span class="number">10</span>).ToList();</span><br></pre></td></tr></table></figure>
+<p>now we need update our list based on page so we do this in <code>PageUpdated</code> event:</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">page_PageUpdated</span>(<span class="params"><span class="keyword">object</span> sender, HandyControl.Data.FunctionEventArgs&lt;<span class="keyword">int</span>&gt; e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    DataList = _totalDataList.Skip((e.Info - <span class="number">1</span>) * <span class="number">10</span>).Take(<span class="number">10</span>).ToList();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         
       </div>
@@ -3973,7 +4000,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -3984,7 +4011,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4036,7 +4063,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Events"><span class="nav-number">2.</span> <span class="nav-text">Events</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Events"><span class="nav-number">2.</span> <span class="nav-text">Events</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">3.</span> <span class="nav-text">Case</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Full-Example"><span class="nav-number">4.</span> <span class="nav-text">Full Example</span></a></li></ol></div>
             
 
           </div>

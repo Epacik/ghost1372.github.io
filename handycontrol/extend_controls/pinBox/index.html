@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="The PinBox control provides a way to enter password by user. example: 1&amp;lt;hc:PinBox Length=&quot;6&quot;/&amp;gt; Attributes   Property     Length   ItemMargin   ItemWidth   ItemHeight   Password   PasswordChar">
+  <meta name="description" content="Another form of password box. 12[TemplatePart(Name = ElementPanel, Type = typeof(Panel))]public class PinBox : Control Attributes   Property Description Default Value Remarks     Password Password  Fo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PinBox">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/pinBox/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="The PinBox control provides a way to enter password by user. example: 1&amp;lt;hc:PinBox Length=&quot;6&quot;/&amp;gt; Attributes   Property     Length   ItemMargin   ItemWidth   ItemHeight   Password   PasswordChar">
+<meta property="og:description" content="Another form of password box. 12[TemplatePart(Name = ElementPanel, Type = typeof(Panel))]public class PinBox : Control Attributes   Property Description Default Value Remarks     Password Password  Fo">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/PinBox.png">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.795Z">
+<meta property="og:updated_time" content="2020-08-14T05:44:35.714Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PinBox">
-<meta name="twitter:description" content="The PinBox control provides a way to enter password by user. example: 1&amp;lt;hc:PinBox Length=&quot;6&quot;/&amp;gt; Attributes   Property     Length   ItemMargin   ItemWidth   ItemHeight   Password   PasswordChar">
+<meta name="twitter:description" content="Another form of password box. 12[TemplatePart(Name = ElementPanel, Type = typeof(Panel))]public class PinBox : Control Attributes   Property Description Default Value Remarks     Password Password  Fo">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/PinBox.png">
 
 
@@ -1134,8 +1134,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3760,48 +3758,71 @@
       <div class="post-body">
         
         
-          <p>The PinBox control provides a way to enter password by user.</p>
-<p>example:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:PinBox</span> <span class="attr">Length</span>=<span class="string">"6"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+          <p>Another form of password box.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">TemplatePart(Name = ElementPanel, Type = typeof(Panel))</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PinBox</span> : <span class="title">Control</span></span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Length</td>
-</tr>
-<tr>
-<td>ItemMargin</td>
-</tr>
-<tr>
-<td>ItemWidth</td>
-</tr>
-<tr>
-<td>ItemHeight</td>
-</tr>
-<tr>
 <td>Password</td>
+<td>Password</td>
+<td></td>
+<td>For security reasons, cannot bind</td>
 </tr>
 <tr>
 <td>PasswordChar</td>
+<td>Mask character</td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Password length</td>
+<td>4</td>
+<td>The minimum value is 4</td>
+</tr>
+<tr>
+<td>ItemMargin</td>
+<td>Cell Interval</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ItemWidth</td>
+<td>Cell width</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ItemHeight</td>
+<td>Cell height</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h1 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h1><table>
 <thead>
 <tr>
-<th>Event</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Completed</td>
+<td>Triggered when input is complete</td>
 </tr>
 </tbody>
 </table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">"32"</span> <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span> <span class="attr">hc:PinBox.Completed</span>=<span class="string">"PinBox_OnCompleted"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:PinBox</span> <span class="attr">Length</span>=<span class="string">"4"</span> <span class="attr">Password</span>=<span class="string">"1234"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:PinBox</span> <span class="attr">Length</span>=<span class="string">"6"</span> <span class="attr">Password</span>=<span class="string">"123456"</span> <span class="attr">Margin</span>=<span class="string">"0,16,0,0"</span> <span class="attr">PasswordChar</span>=<span class="string">"❤"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/PinBox.png" alt="PinBox"></p>
 
         
@@ -3977,7 +3998,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -3988,7 +4009,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4040,7 +4061,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Events"><span class="nav-number">2.</span> <span class="nav-text">Events</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Events"><span class="nav-number">2.</span> <span class="nav-text">Events</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">3.</span> <span class="nav-text">Case</span></a></li></ol></div>
             
 
           </div>

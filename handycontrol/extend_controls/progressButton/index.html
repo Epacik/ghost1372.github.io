@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="ProgressButton is animated progress bar activated by clicking button. example:1&amp;lt;hc:ProgressButton Progress=&quot;0&quot; Content=&quot;Upload&quot;/&amp;gt;              you can use ToggleButton instead of ProgressButton">
+  <meta name="description" content="A progress display is attached to the switch button. 1public class ProgressButton : ToggleButton Attributes   Property Description Default Value Remarks     ProgressStyle Progress Bar Style     Progre">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ProgressButton">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/progressButton/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="ProgressButton is animated progress bar activated by clicking button. example:1&amp;lt;hc:ProgressButton Progress=&quot;0&quot; Content=&quot;Upload&quot;/&amp;gt;              you can use ToggleButton instead of ProgressButton">
+<meta property="og:description" content="A progress display is attached to the switch button. 1public class ProgressButton : ToggleButton Attributes   Property Description Default Value Remarks     ProgressStyle Progress Bar Style     Progre">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/ProgressButton.png">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.797Z">
+<meta property="og:updated_time" content="2020-08-17T17:09:06.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ProgressButton">
-<meta name="twitter:description" content="ProgressButton is animated progress bar activated by clicking button. example:1&amp;lt;hc:ProgressButton Progress=&quot;0&quot; Content=&quot;Upload&quot;/&amp;gt;              you can use ToggleButton instead of ProgressButton">
+<meta name="twitter:description" content="A progress display is attached to the switch button. 1public class ProgressButton : ToggleButton Attributes   Property Description Default Value Remarks     ProgressStyle Progress Bar Style     Progre">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/ProgressButton.png">
 
 
@@ -1134,8 +1134,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3760,36 +3758,37 @@
       <div class="post-body">
         
         
-          <p>ProgressButton is animated progress bar activated by clicking button.</p>
-<p>example:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:ProgressButton</span> <span class="attr">Progress</span>=<span class="string">"0"</span> <span class="attr">Content</span>=<span class="string">"Upload"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<div class="note warning">
-            <p>you can use ToggleButton instead of ProgressButton</p>
-          </div>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ToggleButton</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ToggleButtonLoading&#125;"</span> <span class="attr">Progress</span>=<span class="string">"0"</span> <span class="attr">Content</span>=<span class="string">"Upload"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<div class="note warning">
-            <p>To use Brushes, you should set Style</p>
-          </div>
+          <p>A progress display is attached to the switch button.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ProgressButton</span> : <span class="title">ToggleButton</span></span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Style</td>
-</tr>
-<tr>
-<td>IsChecked</td>
+<td>ProgressStyle</td>
+<td>Progress Bar Style</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Progress</td>
-</tr>
-<tr>
-<td>Content</td>
+<td>Progress</td>
+<td>0</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:ProgressButton</span> <span class="attr">IsChecked</span>=<span class="string">"&#123;Binding IsUploading,Mode=TwoWay&#125;"</span> <span class="attr">Progress</span>=<span class="string">"&#123;Binding Progress&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding IsChecked,RelativeSource=&#123;RelativeSource Self&#125;,Converter=&#123;StaticResource Boolean2StringConverter&#125;,ConverterParameter=UploadStr&#125;"</span> <span class="attr">Width</span>=<span class="string">"180"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:ProgressButton</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ProgressButtonPrimary&#125;"</span> <span class="attr">IsChecked</span>=<span class="string">"&#123;Binding IsUploading,Mode=TwoWay&#125;"</span> <span class="attr">Progress</span>=<span class="string">"&#123;Binding Progress&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding IsChecked,RelativeSource=&#123;RelativeSource Self&#125;,Converter=&#123;StaticResource Boolean2StringConverter&#125;,ConverterParameter=UploadStr&#125;"</span> <span class="attr">Width</span>=<span class="string">"180"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:ProgressButton</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ProgressButtonSuccess&#125;"</span> <span class="attr">IsChecked</span>=<span class="string">"&#123;Binding IsUploading,Mode=TwoWay&#125;"</span> <span class="attr">Progress</span>=<span class="string">"&#123;Binding Progress&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding IsChecked,RelativeSource=&#123;RelativeSource Self&#125;,Converter=&#123;StaticResource Boolean2StringConverter&#125;,ConverterParameter=UploadStr&#125;"</span> <span class="attr">Width</span>=<span class="string">"180"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:ProgressButton</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ProgressButtonInfo&#125;"</span> <span class="attr">IsChecked</span>=<span class="string">"&#123;Binding IsUploading,Mode=TwoWay&#125;"</span> <span class="attr">Progress</span>=<span class="string">"&#123;Binding Progress&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding IsChecked,RelativeSource=&#123;RelativeSource Self&#125;,Converter=&#123;StaticResource Boolean2StringConverter&#125;,ConverterParameter=UploadStr&#125;"</span> <span class="attr">Width</span>=<span class="string">"180"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:ProgressButton</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ProgressButtonWarning&#125;"</span> <span class="attr">IsChecked</span>=<span class="string">"&#123;Binding IsUploading,Mode=TwoWay&#125;"</span> <span class="attr">Progress</span>=<span class="string">"&#123;Binding Progress&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding IsChecked,RelativeSource=&#123;RelativeSource Self&#125;,Converter=&#123;StaticResource Boolean2StringConverter&#125;,ConverterParameter=UploadStr&#125;"</span> <span class="attr">Width</span>=<span class="string">"180"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:ProgressButton</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ProgressButtonDanger&#125;"</span> <span class="attr">IsChecked</span>=<span class="string">"&#123;Binding IsUploading,Mode=TwoWay&#125;"</span> <span class="attr">Progress</span>=<span class="string">"&#123;Binding Progress&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding IsChecked,RelativeSource=&#123;RelativeSource Self&#125;,Converter=&#123;StaticResource Boolean2StringConverter&#125;,ConverterParameter=UploadStr&#125;"</span> <span class="attr">Width</span>=<span class="string">"180"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="note warning">
+            <p>you can use ToggleButton instead of ProgressButton</p>
+          </div>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ToggleButton</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource ToggleButtonLoading&#125;"</span> <span class="attr">Progress</span>=<span class="string">"0"</span> <span class="attr">Content</span>=<span class="string">"Upload"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <h1 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h1><table>
 <thead>
 <tr>
@@ -4003,7 +4002,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4014,7 +4013,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4066,7 +4065,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Styles"><span class="nav-number">2.</span> <span class="nav-text">Styles</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">2.</span> <span class="nav-text">Case</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Styles"><span class="nav-number">3.</span> <span class="nav-text">Styles</span></a></li></ol></div>
             
 
           </div>

@@ -96,17 +96,19 @@
 
 
 
-  <meta name="description" content="example:1&amp;lt;hc:RangeSlider Width=&quot;400&quot; IsSnapToTickEnabled=&quot;True&quot; ValueStart=&quot;2&quot; ValueEnd=&quot;8&quot;/&amp;gt; Attributes   Property     IsSnapToTickEnabled   ValueStart   ValueEnd">
+  <meta name="description" content="Support to select a range of values. 1public class TwoWayRangeBase : Control 123[DefaultEvent(&quot;ValueChanged&quot;), DefaultProperty(&quot;Value&quot;)][TemplatePart(Name = ElementTrack, Type = typeof(Track))]public">
 <meta property="og:type" content="website">
 <meta property="og:title" content="RangeSlider">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/rangeSlider/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="example:1&amp;lt;hc:RangeSlider Width=&quot;400&quot; IsSnapToTickEnabled=&quot;True&quot; ValueStart=&quot;2&quot; ValueEnd=&quot;8&quot;/&amp;gt; Attributes   Property     IsSnapToTickEnabled   ValueStart   ValueEnd">
+<meta property="og:description" content="Support to select a range of values. 1public class TwoWayRangeBase : Control 123[DefaultEvent(&quot;ValueChanged&quot;), DefaultProperty(&quot;Value&quot;)][TemplatePart(Name = ElementTrack, Type = typeof(Track))]public">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.799Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/RangeSlider.png">
+<meta property="og:updated_time" content="2020-08-17T17:11:07.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RangeSlider">
-<meta name="twitter:description" content="example:1&amp;lt;hc:RangeSlider Width=&quot;400&quot; IsSnapToTickEnabled=&quot;True&quot; ValueStart=&quot;2&quot; ValueEnd=&quot;8&quot;/&amp;gt; Attributes   Property     IsSnapToTickEnabled   ValueStart   ValueEnd">
+<meta name="twitter:description" content="Support to select a range of values. 1public class TwoWayRangeBase : Control 123[DefaultEvent(&quot;ValueChanged&quot;), DefaultProperty(&quot;Value&quot;)][TemplatePart(Name = ElementTrack, Type = typeof(Track))]public">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/RangeSlider.png">
 
 
 
@@ -1132,8 +1134,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3758,25 +3758,139 @@
       <div class="post-body">
         
         
-          <p>example:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Width</span>=<span class="string">"400"</span> <span class="attr">IsSnapToTickEnabled</span>=<span class="string">"True"</span> <span class="attr">ValueStart</span>=<span class="string">"2"</span> <span class="attr">ValueEnd</span>=<span class="string">"8"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+          <p>Support to select a range of values.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TwoWayRangeBase</span> : <span class="title">Control</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">DefaultEvent(<span class="meta-string">"ValueChanged"</span>), DefaultProperty(<span class="meta-string">"Value"</span>)</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ElementTrack, Type = typeof(Track))</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">RangeSlider</span> : <span class="title">TwoWayRangeBase</span></span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>IsSnapToTickEnabled</td>
+<td>Minimum</td>
+<td>Minimum value</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>Maximum</td>
+<td>Maximum</td>
+<td>0</td>
+<td></td>
 </tr>
 <tr>
 <td>ValueStart</td>
+<td>Start of the selected range</td>
+<td>0</td>
+<td></td>
 </tr>
 <tr>
 <td>ValueEnd</td>
+<td>The end of the selected range</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>LargeChange</td>
+<td>Single maximum change value</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>SmallChange</td>
+<td>Single minimum change value</td>
+<td>0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>Orientation</td>
+<td>Orientation</td>
+<td>Orientation.Horizontal</td>
+<td></td>
+</tr>
+<tr>
+<td>IsDirectionReversed</td>
+<td>Is it reversed</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>Waiting time before repeated clicks</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Interval</td>
+<td>Repeated click trigger time interval</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AutoToolTipPlacement</td>
+<td>Auto ToolTipPlacement</td>
+<td>AutoToolTipPlacement.None</td>
+<td></td>
+</tr>
+<tr>
+<td>AutoToolTipPrecision</td>
+<td>Automatic tool tip decimal places</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>IsSnapToTickEnabled</td>
+<td>Whether to automatically move the Thumb to the nearest tick mark</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>TickPlacement</td>
+<td>The position of the tick mark</td>
+<td>TickPlacement.None</td>
+<td></td>
+</tr>
+<tr>
+<td>TickFrequency</td>
+<td>The interval between tick marks</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Ticks</td>
+<td>Tick Line Drawing Collection</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>IsMoveToPointEnabled</td>
+<td>Whether the Thumb can be moved to the position clicked by the mouse immediately</td>
+<td>false</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h1 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h1><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ValueChanged</td>
+<td>Triggered when the selected range changes</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">"32"</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Width</span>=<span class="string">"400"</span> <span class="attr">IsSnapToTickEnabled</span>=<span class="string">"True"</span> <span class="attr">ValueStart</span>=<span class="string">"2"</span> <span class="attr">ValueEnd</span>=<span class="string">"8"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Width</span>=<span class="string">"400"</span> <span class="attr">IsSnapToTickEnabled</span>=<span class="string">"True"</span> <span class="attr">ValueEnd</span>=<span class="string">"3"</span> <span class="attr">Margin</span>=<span class="string">"0,32,0,0"</span> <span class="attr">IsEnabled</span>=<span class="string">"False"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Width</span>=<span class="string">"400"</span> <span class="attr">hc:TipElement.Visibility</span>=<span class="string">"Visible"</span> <span class="attr">hc:TipElement.Placement</span>=<span class="string">"Top"</span> <span class="attr">IsSnapToTickEnabled</span>=<span class="string">"True"</span> <span class="attr">Maximum</span>=<span class="string">"100"</span> <span class="attr">ValueEnd</span>=<span class="string">"60"</span> <span class="attr">TickFrequency</span>=<span class="string">"10"</span> <span class="attr">TickPlacement</span>=<span class="string">"BottomRight"</span> <span class="attr">Margin</span>=<span class="string">"0,32,0,0"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Width</span>=<span class="string">"400"</span> <span class="attr">hc:TipElement.Visibility</span>=<span class="string">"Visible"</span> <span class="attr">hc:TipElement.Placement</span>=<span class="string">"Bottom"</span> <span class="attr">hc:TipElement.StringFormat</span>=<span class="string">"#0.00"</span> <span class="attr">ValueEnd</span>=<span class="string">"5"</span> <span class="attr">TickPlacement</span>=<span class="string">"Both"</span> <span class="attr">Margin</span>=<span class="string">"0,32,0,0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">"32,0,0,0"</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Height</span>=<span class="string">"400"</span> <span class="attr">IsSnapToTickEnabled</span>=<span class="string">"True"</span> <span class="attr">ValueEnd</span>=<span class="string">"8"</span> <span class="attr">Orientation</span>=<span class="string">"Vertical"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Height</span>=<span class="string">"400"</span> <span class="attr">IsSnapToTickEnabled</span>=<span class="string">"True"</span> <span class="attr">ValueEnd</span>=<span class="string">"3"</span> <span class="attr">Margin</span>=<span class="string">"32,0,0,0"</span> <span class="attr">IsEnabled</span>=<span class="string">"False"</span> <span class="attr">Orientation</span>=<span class="string">"Vertical"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Height</span>=<span class="string">"400"</span> <span class="attr">hc:TipElement.Visibility</span>=<span class="string">"Visible"</span> <span class="attr">hc:TipElement.Placement</span>=<span class="string">"Left"</span> <span class="attr">IsSnapToTickEnabled</span>=<span class="string">"True"</span> <span class="attr">Maximum</span>=<span class="string">"100"</span> <span class="attr">ValueEnd</span>=<span class="string">"60"</span> <span class="attr">TickFrequency</span>=<span class="string">"10"</span> <span class="attr">TickPlacement</span>=<span class="string">"BottomRight"</span> <span class="attr">Margin</span>=<span class="string">"32,0,0,0"</span> <span class="attr">Orientation</span>=<span class="string">"Vertical"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hc:RangeSlider</span> <span class="attr">Height</span>=<span class="string">"400"</span> <span class="attr">hc:TipElement.Visibility</span>=<span class="string">"Visible"</span> <span class="attr">hc:TipElement.Placement</span>=<span class="string">"Right"</span> <span class="attr">hc:TipElement.StringFormat</span>=<span class="string">"#0.00"</span> <span class="attr">ValueEnd</span>=<span class="string">"5"</span> <span class="attr">TickPlacement</span>=<span class="string">"Both"</span> <span class="attr">Margin</span>=<span class="string">"32,0"</span> <span class="attr">Orientation</span>=<span class="string">"Vertical"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/RangeSlider.png" alt="RangeSlider"></p>
 
         
       </div>
@@ -3951,7 +4065,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -3962,7 +4076,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4014,7 +4128,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Events"><span class="nav-number">2.</span> <span class="nav-text">Events</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">3.</span> <span class="nav-text">Case</span></a></li></ol></div>
             
 
           </div>

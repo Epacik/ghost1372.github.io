@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="example:1&amp;lt;hc:PreviewSlider Value=&quot;500&quot; Maximum=&quot;1000&quot;/&amp;gt;              if you want to show value, you should use PreviewContent            12345&amp;lt;hc:PreviewSlider Name=&quot;PreviewSlider&quot; Value=&quot;500">
+  <meta name="description" content="You can use the preview slider to feedback the status information at different locations to the user. 123[TemplatePart(Name = TrackKey, Type = typeof(Track))][TemplatePart(Name = ThumbKey, Type = type">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PreviewSlider">
 <meta property="og:url" content="http://yoursite.com/handycontrol/extend_controls/previewSlider/index.html">
 <meta property="og:site_name" content="HandyOrg">
-<meta property="og:description" content="example:1&amp;lt;hc:PreviewSlider Value=&quot;500&quot; Maximum=&quot;1000&quot;/&amp;gt;              if you want to show value, you should use PreviewContent            12345&amp;lt;hc:PreviewSlider Name=&quot;PreviewSlider&quot; Value=&quot;500">
+<meta property="og:description" content="You can use the preview slider to feedback the status information at different locations to the user. 123[TemplatePart(Name = TrackKey, Type = typeof(Track))][TemplatePart(Name = ThumbKey, Type = type">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/PreviewSlider.gif">
-<meta property="og:updated_time" content="2020-08-13T08:57:35.797Z">
+<meta property="og:updated_time" content="2020-08-17T17:11:55.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PreviewSlider">
-<meta name="twitter:description" content="example:1&amp;lt;hc:PreviewSlider Value=&quot;500&quot; Maximum=&quot;1000&quot;/&amp;gt;              if you want to show value, you should use PreviewContent            12345&amp;lt;hc:PreviewSlider Name=&quot;PreviewSlider&quot; Value=&quot;500">
+<meta name="twitter:description" content="You can use the preview slider to feedback the status information at different locations to the user. 123[TemplatePart(Name = TrackKey, Type = typeof(Track))][TemplatePart(Name = ThumbKey, Type = type">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/PreviewSlider.gif">
 
 
@@ -1134,8 +1134,6 @@
   </li>
 
 
-                
-              
                 
               
                 
@@ -3760,36 +3758,65 @@
       <div class="post-body">
         
         
-          <p>example:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:PreviewSlider</span> <span class="attr">Value</span>=<span class="string">"500"</span> <span class="attr">Maximum</span>=<span class="string">"1000"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<div class="note info">
-            <p>if you want to show value, you should use <strong>PreviewContent</strong></p>
-          </div>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:PreviewSlider</span> <span class="attr">Name</span>=<span class="string">"PreviewSlider"</span> <span class="attr">Value</span>=<span class="string">"500"</span> <span class="attr">Maximum</span>=<span class="string">"1000"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">hc:PreviewSlider.PreviewContent</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Label</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource LabelPrimary&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding PreviewPosition,ElementName=PreviewSlider&#125;"</span> <span class="attr">ContentStringFormat</span>=<span class="string">"&#123;&#125;&#123;0:#0.0&#125;"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">hc:PreviewSlider.PreviewContent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">hc:PreviewSlider</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <p>You can use the preview slider to feedback the status information at different locations to the user.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">TemplatePart(Name = TrackKey, Type = typeof(Track))</span>]</span><br><span class="line">[<span class="meta">TemplatePart(Name = ThumbKey, Type = typeof(FrameworkElement))</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PreviewSlider</span> : <span class="title">Slider</span></span><br></pre></td></tr></table></figure>
 <h1 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h1><table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Value</td>
-<td>slider value</td>
-</tr>
-<tr>
-<td>Maximum</td>
-<td>maximum value</td>
-</tr>
-<tr>
-<td>PreviewContentOffset</td>
+<td>PreviewContent</td>
+<td>Preview Content</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>PreviewPosition</td>
+<td>PreviewContentOffset</td>
+<td>Preview ContentOffset</td>
+<td>9</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h1 id="Additional-attributes"><a href="#Additional-attributes" class="headerlink" title="Additional attributes"></a>Additional attributes</h1><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PreviewPosition</td>
+<td>Preview position</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h1><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PreviewPositionChanged</td>
+<td>Triggered when the preview position changes</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hc:PreviewSlider</span> <span class="attr">Name</span>=<span class="string">"PreviewSliderHorizontal"</span> <span class="attr">Width</span>=<span class="string">"300"</span> <span class="attr">Value</span>=<span class="string">"500"</span> <span class="attr">Maximum</span>=<span class="string">"1000"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hc:PreviewSlider.PreviewContent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Label</span> <span class="attr">Style</span>=<span class="string">"&#123;StaticResource LabelPrimary&#125;"</span> <span class="attr">Content</span>=<span class="string">"&#123;Binding Path=(hc:PreviewSlider.PreviewPosition),RelativeSource=&#123;RelativeSource Self&#125;&#125;"</span> <span class="attr">ContentStringFormat</span>=<span class="string">"#0.00"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">hc:PreviewSlider.PreviewContent</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hc:PreviewSlider</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/PreviewSlider.gif" alt="PreviewSlider"></p>
 
         
@@ -3965,7 +3992,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget</a>
+                  <a href="https://www.nuget.org/packages/HandyControl" title="Nuget &rarr; https://www.nuget.org/packages/HandyControl" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -3976,7 +4003,7 @@
                   
                     
                   
-                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-box-open"></i>Nuget (CV)</a>
+                  <a href="https://www.nuget.org/packages/HandyControls" title="Nuget (CV) &rarr; https://www.nuget.org/packages/HandyControls" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-code"></i>Nuget (CV)</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -4028,7 +4055,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Attributes"><span class="nav-number">1.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Additional-attributes"><span class="nav-number">2.</span> <span class="nav-text">Additional attributes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Events"><span class="nav-number">3.</span> <span class="nav-text">Events</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case"><span class="nav-number">4.</span> <span class="nav-text">Case</span></a></li></ol></div>
             
 
           </div>
